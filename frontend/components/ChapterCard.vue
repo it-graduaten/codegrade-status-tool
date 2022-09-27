@@ -1,10 +1,7 @@
 <template>
   <div class="card">
-    <h5 class="card-header">
-      {{ chapter.number }}&nbsp;&dash;&nbsp;{{ chapter.name }} {{ chapter.uuid }}
-    </h5>
+    <h5 class="card-header">{{ chapter.number }}&nbsp;&dash;&nbsp;{{ chapter.name }}</h5>
     <div class="card-body">
-      {{ chapter.assignments.length }}
       <ul class="list-group list-group-flush">
         <AssignmentSummary :assignment="a" v-for="a in chapter.assignments" />
       </ul>
