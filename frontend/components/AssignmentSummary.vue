@@ -12,9 +12,10 @@ const props = defineProps({
 });
 
 const color = computed(() => {
-  if (props.assignment.grade === undefined) return "bg-secondary";
-  if (props.assignment.grade == 10) return "bg-success";
-  if (props.assignment.grade >= 5) return "bg-warning";
+  const grade = props.assignment.grade;
+  if (grade === undefined || grade === null) return "bg-secondary";
+  if (grade == 10) return "bg-success";
+  if (grade >= 5) return "bg-warning";
   return "bg-danger";
 });
 </script>
