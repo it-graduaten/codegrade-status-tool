@@ -136,7 +136,6 @@ const errorMessages = ref([]);
 const hasError = ref(false);
 
 const getCourses = async () => {
-  console.log("Fetching courses");
   courses.value = await $fetch(`/api/course`);
 };
 
