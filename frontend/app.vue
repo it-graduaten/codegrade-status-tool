@@ -155,7 +155,10 @@ const getCourseWithAssignmentsAndSubmissions = () => {
       },
     }
   )
-    .then((res) => (selectedCourse.value = res))
+    .then((res) => {
+      selectedCourse.value = res;
+      setLocalStorage();
+    })
     .catch((err) => {
       console.log(err);
     })
@@ -188,5 +191,25 @@ const checkForError = () => {
   }
 };
 
+const getLocalStorage = () => {
+  const courseId = localStorage.getItem("codegrade-status-tool-courseId");
+  if (courseId == undefined || courseId == null) selectedCourse.value = 0;
+  else selectedCourseId.value = courseId;
+
+  const rnumber = localStorage.getItem("codegrade-status-tool-studentNumber");
+  if (rnumber == undefined || rnumber == null) studentNumber.value = "";
+  else studentNumber.value = rnumber;
+};
+
+const setLocalStorage = () => {
+  localStorage.setItem("codegrade-status-tool-courseId", selectedCourseId.value);
+  localStorage.setItem("codegrade-status-tool-studentNumber", studentNumber.value);
+};
+
 getCourses();
+
+onMounted(() => {
+  getLocalStorage();
+});
 </script>
+<script></script>
