@@ -56,6 +56,11 @@ export default defineEventHandler(async (event) => {
     // Get the courses
     let course = courses.find(course => course.codegradeId == parseInt(courseId));
 
+    // For each chapter in the course, clear the assignments
+    course.chapters.forEach(chapter => {
+        chapter.assignments = [];
+    });
+
     assignments.forEach(assignment => {
         // Get the chapter number
         const chapterNumber = assignment.name.split(".")[0];
