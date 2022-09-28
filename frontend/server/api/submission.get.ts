@@ -40,8 +40,6 @@ export default defineEventHandler(async (event) => {
         headers
     });
 
-    console.log("All assignments", assignments);
-
 
     // Add grade to assignment
     assignments = assignments.map(assignment => {
