@@ -4,3 +4,9 @@
   width: 16px;
   height: 16px;
 }
+
+#__nuxt {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}

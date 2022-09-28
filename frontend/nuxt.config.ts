@@ -7,4 +7,17 @@ export default defineNuxtConfig({
         codegradeTenantId: "",
     },
     css: ['~/assets/styles/main.scss'],
+    app: {
+        head: {
+
+            title: 'CodeGrade Status Tool',
+            htmlAttrs: {
+                class: "h-100",
+                lang: "en"
+            },
+            bodyAttrs: {
+                class: "h-100"
+            }
+        }
+    }
 })
