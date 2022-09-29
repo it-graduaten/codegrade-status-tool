@@ -152,7 +152,7 @@ const getCourseWithAssignmentsAndSubmissions = () => {
   loading.value = true;
 
   $fetch(
-    `/api/offlinesubmission?courseId=${selectedCourseId.value}&studentNumber=${studentNumber.value}`,
+    `/api/submission?courseId=${selectedCourseId.value}&studentNumber=${studentNumber.value}`,
     {
       headers: {
         "Content-Type": "application/json",
