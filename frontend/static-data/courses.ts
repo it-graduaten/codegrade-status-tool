@@ -86,6 +86,14 @@ const courses = [
             number: "10", name: "Bestanden", file: "files", assignments: [], deadline: null,
             mandatoryAssignments: ["01", "02", "03", "04", "05"]
         },]
+    },
+    {
+        codegradeId: 4041,
+        name: "Objectgeoriënteerd programmeren -G, L & T",
+        chapters: [{
+            number: "01", name: "Objectgeoriënteerd programmeren deel 1", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        }]
     }
 ]
 

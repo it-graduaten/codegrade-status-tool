@@ -63,7 +63,7 @@ export default defineEventHandler(async (event) => {
         // Get the chapter number
         const chapterNumber = assignment.name.split(".")[0];
         // Get the assignment number
-        const assignmentNumber = assignment.name.split(".")[1];
+        const assignmentNumber = assignment.name.split(".")[1].substring(0, 2);
         // Get the chapter
         const chapter = course.chapters.find(chapter => chapter.number == chapterNumber);
         // Check if assignment is mandatory
