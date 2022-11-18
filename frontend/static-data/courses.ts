@@ -93,6 +93,26 @@ const courses = [
         chapters: [{
             number: "01", name: "Objectgeoriënteerd programmeren deel 1", deadline: null,
             mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "02", name: "Objectgeoriënteerd programmeren deel 2", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "03", name: "Statische klassen", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "04", name: "Overerving deel 1", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "05", name: "Overerving deel 2", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "06", name: "Lijsten en OO", deadline: null,
+            mandatoryAssignments: ["01", "02"]
         }]
     }
 ]

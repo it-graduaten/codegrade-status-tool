@@ -66,18 +66,22 @@ export default defineEventHandler(async (event) => {
         const assignmentNumber = assignment.name.split(".")[1].substring(0, 2);
         // Get the chapter
         const chapter = course.chapters.find(chapter => chapter.number == chapterNumber);
-        // Check if assignment is mandatory
-        const mandatory = chapter.mandatoryAssignments.includes(assignmentNumber)
-        // Get grade for the assignment
-        const submission: Array<Submission> = submissionResult[assignment.id];
-        // Set deadline for the chapter
-        chapter.deadline = mandatory ? assignment.deadline : chapter.deadline;
-        // Add the assignment to the chapter
-        chapter.assignments.push({
-            ...assignment,
-            grade: submission.length > 0 ? submission[submission.length - 1].grade : null,
-            mandatory
-        });
+
+        // If the chapter is found, add the assignment to the chapter
+        if (chapter) {
+            // Check if assignment is mandatory
+            const mandatory = chapter.mandatoryAssignments.includes(assignmentNumber)
+            // Get grade for the assignment
+            const submission: Array<Submission> = submissionResult[assignment.id];
+            // Set deadline for the chapter
+            chapter.deadline = mandatory ? assignment.deadline : chapter.deadline;
+            // Add the assignment to the chapter
+            chapter.assignments.push({
+                ...assignment,
+                grade: submission.length > 0 ? submission[submission.length - 1].grade : null,
+                mandatory
+            });
+        }
     });
 
     // Add assignments to chapters
