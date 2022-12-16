@@ -113,7 +113,28 @@ const courses = [
         {
             number: "06", name: "Lijsten en OO", deadline: null,
             mandatoryAssignments: ["01", "02"]
-        }]
+        },
+        {
+            number: "07", name: "Enkelvoudige relaties", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "08", name: "Unit testing", deadline: null,
+            mandatoryAssignments: []
+        },
+        {
+            number: "09", name: "Exception handling", deadline: null,
+            mandatoryAssignments: ["01", "02"]
+        },
+        {
+            number: "10", name: "WPF deel 1", deadline: null,
+            mandatoryAssignments: []
+        },
+        {
+            number: "11", name: "WPF deel 2", deadline: null,
+            mandatoryAssignments: []
+        }
+        ]
     }
 ]
 
